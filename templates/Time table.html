@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table - Evergreen Institute of Engineering & Technology</title>
+    <link rel="stylesheet" href="statics/style.css">
+</head>
+<body>
+<style>
+    /* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #06410e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+header h1{
+    color: #ddd;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Time Table Container */
+.time-table-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/* Branch Section */
+.branch {
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.branch h3 {
+    font-size: 26px;
+    color:green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.branch h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Time Table Table */
+.time-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.time-table th,
+.time-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.time-table th {
+    background-color: #06571f;
+    color: white;
+    font-weight: bold;
+}
+
+.time-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.time-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for the Holiday row */
+.time-table td[colspan="3"] {
+    background-color: #ffcccc;
+    font-weight: bold;
+    color: #e60000;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .time-table-container {
+        width: 95%;
+    }
+
+    .time-table th,
+    .time-table td {
+        padding: 8px;
+    }
+}
+
+/* Hover effect for the entire branch */
+.branch:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Box shadow for table hover effect */
+.time-table tr:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+<header>
+    <h1>Time Table</h1>
+</header>
+
+<div class="time-table-container">
+    <h2>Weekly Time Table</h2>
+
+    <!-- B.Tech in Computer Science -->
+    <div class="branch">
+        <h3>B.Tech in Computer Science</h3>
+
+        <!-- Semester 1 -->
+        <h4>Semester 1</h4>
+        <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Session</th>
+                    <th>Afternoon Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Programming</td>
+                    <td>Mathematics</td>
+                    <td>Physics</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Data Structures</td>
+                    <td>Computer Networks</td>
+                    <td>Algorithms</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Operating Systems</td>
+                    <td>Software Engineering</td>
+                    <td>Computer Architecture</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Discrete Mathematics</td>
+                    <td>Networking Labs</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Object-Oriented Programming</td>
+                    <td>Database Management</td>
+                    <td>Computer Graphics</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Project Work</td>
+                    <td>Lab Session</td>
+                    <td>Workshop</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="3">Holiday</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Semester 2 -->
+        <h4>Semester 2</h4>
+        <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Session</th>
+                    <th>Afternoon Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Computer Networks</td>
+                    <td>Software Engineering</td>
+                    <td>Algorithms</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Database Management</td>
+                    <td>Networking</td>
+                    <td>Object-Oriented Programming</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Data Structures</td>
+                    <td>Mathematics</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Operating Systems</td>
+                    <td>Software Testing</td>
+                    <td>Data Science</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Computer Architecture</td>
+                    <td>Algorithms</td>
+                    <td>Machine Learning</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Lab Session</td>
+                    <td>Project Work</td>
+                    <td>Workshop</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="3">Holiday</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- More semesters for Computer Science... -->
+        <!-- Semester 3 -->
+        <h4>Semester 3</h4>
+        <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Session</th>
+                    <th>Afternoon Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Software Engineering</td>
+                    <td>Data Structures</td>
+                    <td>Database Management</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Network Security</td>
+                    <td>Mobile Computing</td>
+                    <td>Cloud Computing</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Artificial Intelligence</td>
+                    <td>Computer Networks</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Machine Learning</td>
+                    <td>Algorithms</td>
+                    <td>Operating Systems</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Object-Oriented Programming</td>
+                    <td>Software Testing</td>
+                    <td>Data Science</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Project Work</td>
+                    <td>Lab Session</td>
+                    <td>Workshop</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="3">Holiday</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Semester 4 -->
+        <h4>Semester 4</h4>
+        <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Session</th>
+                    <th>Afternoon Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Data Science</td>
+                    <td>Network Security</td>
+                    <td>Big Data</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Cloud Computing</td>
+                    <td>Data Visualization</td>
+                    <td>Machine Learning</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Artificial Intelligence</td>
+                    <td>Cloud Services</td>
+                    <td>Mobile Computing</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Software Design</td>
+                    <td>Software Engineering</td>
+                    <td>Data Science Tools</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Database Systems</td>
+                    <td>AI Models</td>
+                    <td>Security Protocols</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Project Work</td>
+                    <td>Lab Session</td>
+                    <td>Workshop</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="3">Holiday</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Semester 5 -->
+        <h4>Semester 5</h4>
+        <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Session</th>
+                    <th>Afternoon Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Mobile Computing</td>
+                    <td>Cloud Computing</td>
+                    <td>Big Data</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Machine Learning</td>
+                    <td>Artificial Intelligence</td>
+                    <td>Data Privacy</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Data Structures</td>
+                    <td>Database Management</td>
+                    <td>Network Security</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Software Testing</td>
+                    <td>AI & Neural Networks</td>
+                    <td>Cloud Services</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Data Science Tools</td>
+                    <td>Distributed Systems</td>
+                    <td>Big Data Analytics</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Project Work</td>
+                    <td>Lab Session</td>
+                    <td>Workshop</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="3">Holiday</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Semester 6 -->
+        <h4>Semester 6</h4>
+        <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Session</th>
+                    <th>Afternoon Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Cloud Computing</td>
+                    <td>Big Data Analytics</td>
+                    <td>Advanced Programming</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Security Protocols</td>
+                    <td>Data Structures</td>
+                    <td>Distributed Systems</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>AI Algorithms</td>
+                    <td>Cloud Services</td>
+                    <td>Machine Learning</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Project Work</td>
+                    <td>Lab Session</td>
+                    <td>Workshop</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Data Science</td>
+                    <td>AI Models</td>
+                    <td>Mobile Computing</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Project Work</td>
+                    <td>Research & Development</td>
+                    <td>Innovation Lab</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="3">Holiday</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- B.Tech in Mechanical Engineering -->
+    <div class="branch">
+        <h3>B.Tech in Mechanical Engineering</h3>
+
+        <!-- Semester 1 -->
+        <h4>Semester 1</h4>
+        <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Session</th>
+                    <th>Afternoon Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Mechanics of Solids</td>
+                    <td>Mathematics</td>
+                    <td>Thermodynamics</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Fluid Mechanics</td>
+                    <td>Material Science</td>
+                    <td>Heat Transfer</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Machine Design</td>
+                    <td>Manufacturing Process</td>
+                    <td>Engineering Mathematics</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Strength of Materials</td>
+                    <td>Vibrations</td>
+                    <td>Workshop Practice</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Internal Combustion Engines</td>
+                    <td>Robotics</td>
+                    <td>Project Work</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Lab Session</td>
+                    <td>Workshop</td>
+                    <td>Project Work</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="3">Holiday</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- More semesters for Mechanical Engineering... -->
+
+    </div>
+
+    <!-- B.Tech in Civil Engineering -->
+    <div class="branch">
+        <h3>B.Tech in Civil Engineering</h3>
+
+        <!-- Semester 1 -->
+        <h4>Semester 1</h4>
+        <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Session</th>
+                    <th>Afternoon Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Surveying</td>
+                    <td>Mathematics</td>
+                    <td>Physics</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Concrete Technology</td>
+                    <td>Geotechnical Engineering</td>
+                    <td>Building Materials</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Strength of Materials</td>
+                    <td>Fluid Mechanics</td>
+                    <td>Hydraulics</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Building Construction</td>
+                    <td>Water Resources Engineering</td>
+                    <td>Soil Mechanics</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Structural Analysis</td>
+                    <td>Environmental Engineering</td>
+                    <td>Transportation Engineering</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Lab Session</td>
+                    <td>Workshop</td>
+                    <td>Project Work</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="3">Holiday</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- More semesters for Civil Engineering... -->
+
+    </div>
+
+    <!-- B.Tech in Electrical Engineering -->
+    <div class="branch">
+        <h3>B.Tech in Electrical Engineering</h3>
+
+        <!-- Semester 1 -->
+        <h4>Semester 1</h4>
+        <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Session</th>
+                    <th>Afternoon Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Electrical Circuits</td>
+                    <td>Mathematics</td>
+                    <td>Physics</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Digital Electronics</td>
+                    <td>Control Systems</td>
+                    <td>Signals and Systems</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Power Systems</td>
+                    <td>Microprocessors</td>
+                    <td>Power Electronics</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Analog Electronics</td>
+                    <td>Electrical Machines</td>
+                    <td>Renewable Energy Systems</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Control Engineering</td>
+                    <td>Communication Systems</td>
+                    <td>Electrical Power Distribution</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Lab Session</td>
+                    <td>Project Work</td>
+                    <td>Workshop</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="3">Holiday</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- More semesters for Electrical Engineering... -->
+
+    </div>
+
+    <!-- M.Sc. in Data Science -->
+    <div class="branch">
+        <h3>M.Sc. in Data Science</h3>
+
+        <!-- Semester 1 -->
+        <h4>Semester 1</h4>
+        <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning Session</th>
+                    <th>Afternoon Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Data Mining</td>
+                    <td>Machine Learning</td>
+                    <td>Data Visualization</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Big Data Analytics</td>
+                    <td>AI & Neural Networks</td>
+                    <td>Probability & Statistics</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Cloud Computing</td>
+                    <td>Data Structures</td>
+                    <td>Natural Language Processing</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Data Science Labs</td>
+                    <td>Deep Learning</td>
+                    <td>Data Security</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Big Data Tools</td>
+                    <td>Data Engineering</td>
+                    <td>Project Work</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Workshop</td>
+                    <td>Lab Session</td>
+                    <td>Project Work</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="3">Holiday</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- More semesters for M.Sc. Data Science... -->
+
+    </div>
+
+    <!-- MCA, M.Tech, MBA sections... -->
+<!-- MBA -->
+ <!-- MCA -->
+ <div class="branch">
+    <h3>MCA (Master of Computer Applications)</h3>
+
+    <!-- Semester 1 -->
+    <h4>Semester 1</h4>
+    <table class="time-table">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Morning Session</th>
+                <th>Afternoon Session</th>
+                <th>Evening Session</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Software Engineering</td>
+                <td>Database Management</td>
+                <td>Object-Oriented Programming</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Computer Networks</td>
+                <td>Advanced Java</td>
+                <td>Data Structures</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Operating Systems</td>
+                <td>Web Technologies</td>
+                <td>Algorithms</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Cloud Computing</td>
+                <td>Artificial Intelligence</td>
+                <td>Computer Graphics</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Software Testing</td>
+                <td>Distributed Systems</td>
+                <td>Mobile Computing</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Project Work</td>
+                <td>Lab Session</td>
+                <td>Workshop</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td colspan="3">Holiday</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Semester 2 -->
+    <h4>Semester 2</h4>
+    <table class="time-table">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Morning Session</th>
+                <th>Afternoon Session</th>
+                <th>Evening Session</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Software Design</td>
+                <td>Object-Oriented Analysis</td>
+                <td>Network Security</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Computer Architecture</td>
+                <td>Database Optimization</td>
+                <td>Android Development</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Data Science</td>
+                <td>Web Security</td>
+                <td>UI/UX Design</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Networking</td>
+                <td>Game Development</td>
+                <td>Cloud Services</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Software Testing</td>
+                <td>Advanced Algorithms</td>
+                <td>Distributed Computing</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Project Work</td>
+                <td>Lab Session</td>
+                <td>Workshop</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td colspan="3">Holiday</td>
+            </tr>
+        </tbody>
+    </table>
+
+<div class="branch">
+    <h3>MBA (Master of Business Administration)</h3>
+
+    <!-- Semester 1 -->
+    <h4>Semester 1</h4>
+    <table class="time-table">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Morning Session</th>
+                <th>Afternoon Session</th>
+                <th>Evening Session</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Principles of Management</td>
+                <td>Financial Accounting</td>
+                <td>Business Communication</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Organizational Behavior</td>
+                <td>Marketing Management</td>
+                <td>Human Resource Management</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Strategic Management</td>
+                <td>Quantitative Techniques</td>
+                <td>Business Economics</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Corporate Finance</td>
+                <td>Operations Management</td>
+                <td>Entrepreneurship</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>International Business</td>
+                <td>Project Management</td>
+                <td>Management Information Systems</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Case Study</td>
+                <td>Group Discussion</td>
+                <td>Presentation Skills</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td colspan="3">Holiday</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Semester 2 -->
+    <h4>Semester 2</h4>
+    <table class="time-table">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Morning Session</th>
+                <th>Afternoon Session</th>
+                <th>Evening Session</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Managerial Economics</td>
+                <td>Project Management</td>
+                <td>Operations Research</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Marketing Strategy</td>
+                <td>Financial Management</td>
+                <td>Business Leadership</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Supply Chain Management</td>
+                <td>Strategic HRM</td>
+                <td>Risk Management</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Corporate Law</td>
+                <td>Digital Marketing</td>
+                <td>Management Accounting</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Market Research</td>
+                <td>International Economics</td>
+                <td>Global Business Strategies</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Case Studies</td>
+                <td>Group Discussions</td>
+                <td>Leadership Training</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td colspan="3">Holiday</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="footer-bottom-area">
+    <div class="footer-bottom-container">
+        <div class="row">
+            <div class="bottom-content1">
+                © Copyright EIET Group 2024. Designed and Developed by Me & My Team
+                <a target="_blank" href="">EIET Group</a>
+                |
+                <a href="#">Blog</a>
+                |
+                <a href="#">Sitemap</a>
+                |
+                <a href="#">Social Media Links</a>
+            </div>    
+        </div>
+
+</body>
+</html>

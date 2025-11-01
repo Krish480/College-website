@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Evergreen Institute of Engineering & Technology</title>
+    <link rel="stylesheet" href="statics/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .main-content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #2E8B57;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact-info div {
+            flex: 1;
+            margin-right: 20px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 10px 15px;
+            background-color: #2E8B57;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        .contact-form button:hover {
+            background-color: #1c6e43;
+        }
+
+        .map-container {
+            margin-top: 40px;
+        }
+
+        footer {
+            background-color: #2E8B57;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <logo>
+            <img src="/Assets/Clg logo.jpg" class="logo">
+        </logo>
+        <h1>
+            EVERGRREN INSTITUTE OF ENGINEERING AND TECHNOLOGY
+        </h1>
+    </nav>
+
+<div class="main-content">
+    <h2>Get in Touch</h2>
+    
+    <div class="contact-info">
+        <!-- Contact Information -->
+        <div>
+            <h3>Address</h3>
+            <p>Evergreen Institute of Engineering & Technology</p>
+            <p>1234 Engineering Lane, Tech City, State, ZIP Code</p>
+        </div>
+        
+        <div>
+            <h3>Phone</h3>
+            <p>+91 1234 567 890</p>
+        </div>
+
+        <div>
+            <h3>Email</h3>
+            <p>info@evergreeninstitute.edu</p>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <h3>Send us a Message</h3>
+    <form class="contact-form" action="submit.html" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    
+
+    <!-- Google Map Embed -->
+    <div class="map-container">
+        <h3>Our Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.0142742391847!2d-101.67607777561416!3d26.151305964531233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866b72b90c6f70b1%3A0x7872fd4ff3450b4d!2sEvergreen%20Institute%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1638363748935!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+</div>
+
+<div class="footer-bottom-area">
+    <div class="footer-bottom-container">
+        <div class="row">
+            <div class="bottom-content1">
+                © Copyright EIET Group 2024. Designed and Developed by Me & My Team
+                <a target="_blank" href="">EIET Group</a>
+                |
+                <a href="#">Blog</a>
+                |
+                <a href="#">Sitemap</a>
+                |
+                <a href="#">Social Media Links</a>
+            </div>   
+        </div>
+    </div>
+
+</body>
+</html>

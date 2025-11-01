@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admiission Form</title>
+    <link rel="stylesheet" href="statics/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <nav>
+            <logo>
+                <img src="/Assets/Clg logo.jpg" class="logo">
+            </logo>
+            <h1>
+                EVERGRREN INSTITUTE OF ENGINEERING AND TECHNOLOGY
+            </h1>
+        </nav>
+        <div class="image">
+            <img src="/Assets/Evergreen Institute.jpg">
+        </div>
+        <marquee> <a href="Admiission form.html"> 👉Now Admission Open👈</marquee></a>
+        <ul class="parent">
+            <li class="bar"><a href="Index.html">HOME</a></li>
+            <li class="bar"><a href="About.html">ABOUT</a></li>
+            <li class="bar"><a href="Contact.html">CONTACT</a></li>
+            <li class="bar"><a href="Department.html">DEPARTMENT</a></li>
+            <li class="bar"><a href="Sports.html">SPORTS</a></li>
+            <li class="bar"><a href="Courses.html">COURSES</a></li>
+            </div>
+        </ul>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: white;
+                color: #0f822cc7;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: auto;
+            }
+
+            .form-container {
+                background: #f6f4f4;
+                position: relative;
+                left: 10%;
+                top: 5px;
+                justify-content: center;
+                align-items: center;
+                backdrop-filter: blur(10px);
+                padding: 20px 30px;
+                border-radius: 10px;
+                width: 80vw;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #042a09;
+            }
+
+            label {
+                display: block;
+                margin-top: 15px;
+                font-weight: bold;
+            }
+
+            input,
+            select,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            input[type="submit"] {
+                background: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+
+            input[type="submit"]:hover {
+                background: #45a049;
+            }
+        </style>
+        </head>
+
+        <body>
+
+            <div class="form-container">
+                <h2>Admission Form</h2>
+                <form id="admissionForm" action="submit.html" method="POST">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+            
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+            
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            
+                    <label for="course">Course Applying For:</label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected>Select a course</option>
+                        <option value="computer-science">Computer Science Engineering</option>
+                        <option value="mechanical">Mechanical Engineering</option>
+                        <option value="civil">Civil Engineering</option>
+                        <option value="electronics">Electronics and Communication</option>
+                    </select>
+            
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+            
+                    <input type="submit" value="Submit">
+                    <p id="error-message" style="color: red; font-weight: bold;"></p>
+                </form>
+            </div>
+            
+            <script>
+                document.getElementById('admissionForm').addEventListener('submit', function (event) {
+                    const name = document.getElementById('name').value.trim();
+                    const dob = document.getElementById('dob').value;
+                    const gender = document.getElementById('gender').value;
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const course = document.getElementById('course').value;
+                    const address = document.getElementById('address').value.trim();
+                    const errorMessage = document.getElementById('error-message');
+            
+                    // Clear previous error messages
+                    errorMessage.textContent = '';
+            
+                    // Validation checks
+                    if (!name) {
+                        errorMessage.textContent = 'Full Name is required.';
+                        event.preventDefault();
+                        return;
+                    }
+            
+                    if (!dob) {
+                        errorMessage.textContent = 'Date of Birth is required.';
+                        event.preventDefault();
+                        return;
+                    }
+            
+                    if (!gender) {
+                        errorMessage.textContent = 'Please select your gender.';
+                        event.preventDefault();
+                        return;
+                    }
+            
+                    const emailRegex = /^\S+@\S+\.\S+$/;
+                    if (!email || !emailRegex.test(email)) {
+                        errorMessage.textContent = 'Please enter a valid email address.';
+                        event.preventDefault();
+                        return;
+                    }
+            
+                    const phoneRegex = /^\d{10}$/;
+                    if (!phone || !phoneRegex.test(phone)) {
+                        errorMessage.textContent = 'Please enter a valid 10-digit phone number.';
+                        event.preventDefault();
+                        return;
+                    }
+            
+                    if (!course) {
+                        errorMessage.textContent = 'Please select a course.';
+                        event.preventDefault();
+                        return;
+                    }
+            
+                    if (!address) {
+                        errorMessage.textContent = 'Address is required.';
+                        event.preventDefault();
+                        return;
+                    }
+            
+                    // If all validations pass
+                    alert('Form submitted successfully!');
+                });
+            </script>
+            
+
+            </div>
+            <footer>
+                <div class="footer-top-area">
+                    <div class="footer-container">
+                        <div class="footer-content">
+                            <div class="content">
+                                <h3 class="widget-title">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    EIET Group
+                                </h3>
+                                <p class="details">
+                                    for-admission
+                                    <a href="#">admission@eietgroupofindia.com</a>
+                                    <br>
+                                    Contact-Us
+                                    <a href="#">contactus@eietgroupofindia.com</a>
+                                </p>
+                                <ul class="social-media">
+                                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-content">
+                            <div class="content2">
+                                <h3 class="widget-title">Useful Links</h3>
+                                <ul class="menu-feture-links">
+                                    <li class="menu-items">
+                                        <!-- ::before -->
+                                        <a href="https://dte.mponline.gov.in/">DTE</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <!-- ::before -->
+                                        <a href="https://www.aicte-india.org/">AICTE</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <!-- ::before -->
+                                        <a href="https://www.rgpv.ac.in/">RGPV</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <!-- ::before -->
+                                        <a href="http://cbse.nic.in//">CBSE Board</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <!-- ::before -->
+                                        <a href="http://mpbse.nic.in//">MP Board</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <!-- ::before -->
+                                        <a href="https://www.mponline.gov.in/portal/">MP Online</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <!-- ::before -->
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <!-- ::before -->
+                                        <a href="http://www.bubhopal.ac.in/1068/Home">BU</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <!-- ::before -->
+                                        <a href="http://103.134.248.123/ERP/admin/File/transportentry">Transport</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <!-- ::before -->
+                                        <a href="https://ncte.gov.in/Website/Index.aspx">NCTE</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-content">
+                            <div class="content3">
+                                <h3 class="widget-title">Contact Us</h3>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-location-crosshairs" aria-hidden="true">
+                                            <!-- ::before -->
+                                        </i>
+                                        105, XYZ Nagar, Opposite Kokta, Unknown Road Bhopal
+                                    </li>
+                                    <li><i class="fa fa-phone" aria-hidden="true">
+                                            <!-- ::before -->
+                                        </i>
+                                        <a href="tel:00-00-000000">00-00-000000</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                                        <a href="#">contactus@eietgroupofindia.com</a>
+                                        <!-- ::before -->
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-fax" aria-hidden="true"></i>
+                                        0000-000000
+                                        <!-- ::before -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-content">
+                            <div class="content4">
+                                <h3 class="widget-title">Quick Support</h3>
+                                <form class="support">
+                                    <p>
+                                        <input type="name" name="name" placeholder="Your Name" value>
+                                        <br>
+                                        <input type="email" name="Your Email" placeholder="Your Email">
+                                        <br>
+                                        <input type="telephone" name="telephone" placeholder="Your Mobile">
+                                        <br>
+                                        <textarea name="your-message" cols="32" rows="3"
+                                            placeholder="Your Message"></textarea>
+                                        <button>Send</button>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom-area">
+                    <div class="footer-bottom-container">
+                        <div class="row">
+                            <div class="bottom-content1">
+                                © Copyright EIET Group 2024. Designed and Developed by Me & My Team
+                                <a target="_blank" href="">EIET Group</a>
+                                |
+                                <a href="#">Blog</a>
+                                |
+                                <a href="#">Sitemap</a>
+                                |
+                                <a href="#">Social Media Links</a>
+                            </div>
+                            <div class="bottom-content2">         
+                                    <ul class="payment-icons">
+                                    <li> <span id="siteseal"><script async="" type="text/javascript" src="#"></script></span></li>
+                                    </ul>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    </main>
+</body>
+
+</html>
